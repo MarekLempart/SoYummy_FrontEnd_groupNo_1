@@ -1,15 +1,19 @@
-// src/App.jsx
-
-import { Header } from "./components/Header/Header";
 import WelcomePage from "./pages/WelcomePage";
+import Home from './pages/Home';
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import { Routes, Route } from "react-router-dom";
+import AddRecipes from './pages/AddRecipes'
 
 const App = () => {
   return (
-    <div>
-      <Header />
-      <WelcomePage />
-      {/* Inne komponenty */}
-    </div>
+    <Routes>
+      <Route path="SoYummy_FrontEnd_groupNo_1/" element={<WelcomePage />} />
+      <Route path="SoYummy_FrontEnd_groupNo_1/home" element={<Home />} />
+      <Route path="SoYummy_FrontEnd_groupNo_1/add" element={<AddRecipes />} />
+      <Route path="SoYummy_FrontEnd_groupNo_1/register" element={<Register />} />
+      <Route path="SoYummy_FrontEnd_groupNo_1/signin" element={<Login />} />
+    </Routes>
   );
 };
 

@@ -6,19 +6,19 @@ import "../../styles/Header.css";
 export const Navigation = () => {
   return (
     <nav className="HeaderNav">
-      <NavLink className="HeaderStyledLink" to="/categories/:categoryName">
+      <NavLink className="HeaderStyledLink" to="../SoYummy_FrontEnd_groupNo_1/categories/:categoryName">
         Categories
       </NavLink>
-      <NavLink className="HeaderStyledLink" to="/add">
+      <NavLink className="HeaderStyledLink" to="../SoYummy_FrontEnd_groupNo_1/add">
         Add Recipes
       </NavLink>
-      <NavLink className="HeaderStyledLink" to="/my">
+      <NavLink className="HeaderStyledLink" to="../SoYummy_FrontEnd_groupNo_1/my">
         My Recipes
       </NavLink>
-      <NavLink className="HeaderStyledLink" to="/favorite">
+      <NavLink className="HeaderStyledLink" to="../SoYummy_FrontEnd_groupNo_1/favorite">
         Favorites
       </NavLink>
-      <NavLink className="HeaderStyledLink" to="/shopping-list">
+      <NavLink className="HeaderStyledLink" to="../SoYummy_FrontEnd_groupNo_1/shopping-list">
         Shopping List
       </NavLink>
       <NavLink className="HeaderStyledLink" to="/search">
