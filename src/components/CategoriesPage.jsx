@@ -65,13 +65,18 @@ const CategoriesPage = () => {
       <div className={css.categoryMenu}>
         {categories.map((category) => (
           <button
-            key={category}
+            key={category.name}
             className={`${css.categoryButton} ${
-              category === selectedCategory ? css.active : ""
+              category.name === selectedCategory ? css.active : ""
             }`}
-            onClick={() => handleCategoryChange(category)}
+            onClick={() => handleCategoryChange(category.name)}
           >
-            {category}
+            <img
+              src={category.image}
+              alt={category.name}
+              className={css.categoryImage}
+            />
+            {category.name}
           </button>
         ))}
       </div>
@@ -102,22 +107,25 @@ export default CategoriesPage;
 // import css from "../styles/CategoriesPage.module.css";
 
 // const CategoriesPage = () => {
-//   const { categoryName } = useParams();
+//   const { category } = useParams();
+//   console.log("Current category from URL:", category);
 //   const [categories, setCategories] = useState([]);
 //   const [recipes, setRecipes] = useState([]);
-//   const [selectedCategory, setSelectedCategory] = useState(
-//     categoryName || "Beef"
-//   );
+//   const [selectedCategory, setSelectedCategory] = useState(category || "Beef");
 //   const [error, setError] = useState(null);
 //   const navigate = useNavigate();
 
 //   useEffect(() => {
 //     const fetchCategories = async () => {
 //       try {
+//         console.log("Fetching categories...");
 //         const data = await getCategoryListAPI();
+//         console.log("Fetched categories:", data);
 //         setCategories(data);
-//         if (!categoryName) {
+//         if (!category) {
 //           setSelectedCategory("Beef");
+//         } else {
+//           setSelectedCategory(category);
 //         }
 //       } catch (error) {
 //         console.error("Error fetching categories:", error);
@@ -126,7 +134,7 @@ export default CategoriesPage;
 //     };
 
 //     fetchCategories();
-//   }, [categoryName]);
+//   }, [category]);
 
 //   useEffect(() => {
 //     const fetchRecipes = async () => {
@@ -141,12 +149,15 @@ export default CategoriesPage;
 //       }
 //     };
 
-//     fetchRecipes();
+//     if (selectedCategory) {
+//       fetchRecipes();
+//     }
 //   }, [selectedCategory]);
 
 //   const handleCategoryChange = (category) => {
+//     console.log(`Category changed to: ${category}`);
 //     setSelectedCategory(category);
-//     navigate(`/categories/${category}`);
+//     navigate(`/SoYummy_FrontEnd_groupNo_1/categories/${category}`);
 //   };
 
 //   return (
