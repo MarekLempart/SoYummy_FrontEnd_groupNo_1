@@ -1,7 +1,12 @@
 // src/redux/authOperations.js
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { getCurrentUser, loginUser, logoutUser, signupUser } from "../API/api";
+import {
+  loginUser as apiLoginUser,
+  logoutUser as apiLogoutUser,
+  getCurrentUser,
+  signupUser,
+} from "../API/api";
 
 // Rejestracja użytkownika
 export const registerUser = createAsyncThunk(
@@ -17,11 +22,11 @@ export const registerUser = createAsyncThunk(
 );
 
 // Logowanie użytkownika
-export const loginUserThunk = createAsyncThunk(
+export const loginUser = createAsyncThunk(
   "auth/login",
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await loginUser(credentials);
+      const response = await apiLoginUser(credentials);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -30,11 +35,11 @@ export const loginUserThunk = createAsyncThunk(
 );
 
 // Wylogowanie użytkownika
-export const logoutUserThunk = createAsyncThunk(
+export const logoutUser = createAsyncThunk(
   "auth/logout",
   async (_, { rejectWithValue }) => {
     try {
-      await logoutUser();
+      await apiLogoutUser();
       return;
     } catch (error) {
       return rejectWithValue(error.response.data);
