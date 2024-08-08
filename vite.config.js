@@ -7,4 +7,7 @@ import envCompatible from "vite-plugin-env-compatible";
 export default defineConfig({
   base: "/SoYummy_FrontEnd_groupNo_1/",
   plugins: [react(), envCompatible()],
+  optimizeDeps: {
+    include: ["redux-thunk"],
+  },
 });
