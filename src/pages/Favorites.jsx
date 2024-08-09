@@ -83,9 +83,7 @@ const Favorite = () => {
             <button
               className={css.deleteRecipeBtn}
               onClick={() => handleDelete(recipe.id)}
-            >
-              Delete
-            </button>
+            ></button>
           </div>
         ))}
       </div>

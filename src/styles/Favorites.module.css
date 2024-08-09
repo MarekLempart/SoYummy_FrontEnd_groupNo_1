@@ -98,6 +98,7 @@
   line-height: 15px;
   border: none;
   cursor: pointer;
+  border-radius: 20px 40px 20px 40px;
 }
 
 .deleteRecipeBtn {
@@ -106,9 +107,9 @@
   height: 24px;
   left: 310px;
   top: 14px;
-  background: #ebf3d4;
+  background: #8baa36;
   border-radius: 4px;
-  border: 1.2px solid #22252a;
+
   cursor: pointer;
 }
 
