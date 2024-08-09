@@ -21,12 +21,14 @@
   width: 14px;
   height: 14px;
 
-  color: #fafafa;
+  color: #22252a;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+.trashIcon :hover {
+  color: #fafafa;
+}
 .recipeList {
   display: flex;
   flex-direction: column;
@@ -116,6 +118,7 @@
   border: 1px solid #8baa36;
 }
 .deleteRecipeBtn {
+  color: #22252a;
   position: absolute;
   width: 24px;
   height: 24px;
