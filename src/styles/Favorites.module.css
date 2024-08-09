@@ -98,18 +98,23 @@
   height: 27px;
   left: 247px;
   top: 111px;
-  background: #8baa36;
-  color: #fafafa;
+  background: transparent;
+  color: #22252a;
+
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 15px;
-  border: none;
+  border: 1px solid #8baa36;
   cursor: pointer;
   border-radius: 20px 40px 20px 40px;
 }
-
+.seeRecipeBtn:hover {
+  background: #8baa36;
+  color: #fafafa;
+  border: 1px solid #8baa36;
+}
 .deleteRecipeBtn {
   position: absolute;
   width: 24px;
