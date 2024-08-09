@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 // import { Footer } from "../components/Footer/Footer"; // nie jest zrobiony i nie jest potrzebny
 // import { Header } from "../components/Header/Header"; // nie jest potrzebny
+import trashIcon from "../images/trash-01.svg";
 import css from "../styles/Favorites.module.css";
 
 const Favorite = () => {
@@ -83,7 +84,9 @@ const Favorite = () => {
             <button
               className={css.deleteRecipeBtn}
               onClick={() => handleDelete(recipe.id)}
-            ></button>
+            >
+              <img src={trashIcon} alt="Delete" className={css.trashIcon} />
+            </button>
           </div>
         ))}
       </div>
