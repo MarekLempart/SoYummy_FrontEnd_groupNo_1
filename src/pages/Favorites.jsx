@@ -94,7 +94,13 @@ const Favorite = () => {
         {Array.from(
           { length: Math.min(10, Math.ceil(recipes.length / recipesPerPage)) },
           (_, i) => (
-            <button key={i} onClick={() => handlePageChange(i + 1)}>
+            <button
+              key={i}
+              onClick={() => handlePageChange(i + 1)}
+              className={`css.custom-button ${
+                currentPage === i + 1 ? "active" : ""
+              }`}
+            >
               {i + 1}
             </button>
           )
