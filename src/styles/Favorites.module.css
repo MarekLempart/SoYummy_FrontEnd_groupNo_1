@@ -44,7 +44,7 @@
   border-radius: 8px;
   padding: 10px;
 }
-.dark-mode .recipeCard {
+body.dark-mode .recipeCard {
   background-color: #22252a;
   color: white;
 }
@@ -121,13 +121,13 @@
   color: #fafafa;
   border: 1px solid #8baa36;
 }
-.dark-mode .seeRecipeBtn {
+body.dark-mode .seeRecipeBtn {
   background: #fafafa;
   color: #22252a;
   border: 1px solid #8baa36;
 }
 
-.dark-mode .seeRecipeBtn:hover {
+body.dark-mode .seeRecipeBtn:hover {
   background-color: #22252a;
   color: #fafafa;
   border: 1px solid #8baa36;
@@ -172,7 +172,7 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  color: aqua;
+
   cursor: pointer;
 }
 
